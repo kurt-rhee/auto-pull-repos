@@ -1,0 +1,19 @@
+# Cron configuration for automated git repository pulls
+# This file contains the crontab entries needed to run the pull script twice daily at 12:00 (noon and midnight)
+
+# To install this cron job, run:
+# crontab -e
+# Then add the lines below (uncomment them first)
+
+# Pull repositories at midnight (00:00) and noon (12:00) every day
+0 0 * * * /Users/kurt/Programs/_cron/pull_all_repos.sh  # Midnight
+0 12 * * * /Users/kurt/Programs/_cron/pull_all_repos.sh # Noon
+
+# To view currently installed cron jobs:
+# crontab -l
+
+# To remove all cron jobs:
+# crontab -r
+
+# Note: Make sure the script path is absolute and the script is executable
+# You can test the script manually first: /Users/kurt/Programs/_cron/pull_all_repos.sh
